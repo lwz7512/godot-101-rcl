@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://tween_example.gd" type="Script" id=1]
+[ext_resource path="res://art/Player/alienGreen_front.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+
+[node name="tween_example" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="trans" type="OptionButton" parent="."]
+custom_fonts/font = SubResource( 1 )
+toggle_mode = false
+
+[node name="ease" type="OptionButton" parent="."]
+custom_fonts/font = SubResource( 1 )
+toggle_mode = false
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+[connection signal="item_selected" from="trans" to="." method="_on_trans_item_selected"]
+[connection signal="item_selected" from="ease" to="." method="_on_ease_item_selected"]

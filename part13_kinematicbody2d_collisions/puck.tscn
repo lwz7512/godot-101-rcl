@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://puck.gd" type="Script" id=1]
+[ext_resource path="res://spritesheet_balls.tex" type="Texture" id=2]
+[ext_resource path="res://debug_draw.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 38.0
+
+[node name="puck" type="KinematicBody2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+region_rect = Rect2( 149, -0.5, 148.5, 150 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="debug_draw" parent="." instance=ExtResource( 3 )]

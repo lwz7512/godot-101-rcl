@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://art/grass_main_64x64.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 288.171, 29.8811 )
+
+[node name="platform" type="StaticBody2D"]
+position = Vector2( 310.671, 32.0752 )
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2( -22, -2 )
+shape = SubResource( 1 )
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( -21, 0 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 640, 64 )
+
+[node name="sprite2" type="Sprite" parent="."]
+position = Vector2( 43, 0 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 640, 64 )
+
+[node name="sprite7" type="Sprite" parent="."]
+position = Vector2( 107, 0 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 640, 64 )
+
+[node name="sprite8" type="Sprite" parent="."]
+position = Vector2( 233, 0 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 640, 64 )
+
+[node name="sprite9" type="Sprite" parent="."]
+position = Vector2( 169, 0 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 640, 64 )
+
+[node name="sprite3" type="Sprite" parent="."]
+position = Vector2( -85, 0 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 640, 64 )
+
+[node name="sprite4" type="Sprite" parent="."]
+position = Vector2( -149, 0 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 640, 64 )
+
+[node name="sprite5" type="Sprite" parent="."]
+position = Vector2( -213, 0 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 640, 64 )
+
+[node name="sprite6" type="Sprite" parent="."]
+position = Vector2( -277, 0 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 640, 64 )
