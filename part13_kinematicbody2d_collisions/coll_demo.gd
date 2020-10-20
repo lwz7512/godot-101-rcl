@@ -12,9 +12,10 @@ func _ready():
 func _input(event):
 	# spawn a ball at start pos when mouse clicked and
 	# set collision response mode to reflect/slide
-	if event.is_action_pressed("mouse_click"):
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
+		#print("Mouse Click/Unclick at: ", event.position)
 		var b = ball.instance()
-		b.set_pos(get_node("start").get_global_pos())
+		b.position = get_node("start").global_position
 		b.reflect = reflect
 		add_child(b)
 

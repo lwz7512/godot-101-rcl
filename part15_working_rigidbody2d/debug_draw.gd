@@ -10,25 +10,25 @@ var colors = {
 	'GREEN': Color(.054, .718, .247)
 }
 
-var WIDTH = 15
+var WIDTH = 5
 var parent = null
 
 func _ready():
 	parent = get_parent()
 	#set_process(true)
 	#set_process_input(true)
+	#visible = false
 
 func _input(event):
 	if event.is_action_pressed("ui_select"):
-		#set_hidden(not is_hidden())
 		visible = not visible
 
 func _process(delta):
 	update()
 
 func _draw():
-	#draw_arrow(parent.acc, Vector2(), 0.25, 'RED')
-	draw_arrow(parent.vel, Vector2(), 0.5, 'GREEN')
+	draw_arrow(parent.get_linear_velocity(), Vector2(), 1.0, 'YELLOW')
+	draw_arrow(parent.get_applied_force(), Vector2(), 0.5, 'RED')
 
 func draw_arrow(vector, pos, scale, color):
 	color = colors[color]

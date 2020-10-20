@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://coll_demo.gd" type="Script" id=1]
 [ext_resource path="res://spritesheet_balls.tex" type="Texture" id=2]
 [ext_resource path="res://spritesheet_tilesBlack.tex" type="Texture" id=3]
+[ext_resource path="res://Xolonium-Regular.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 60.0083
@@ -11,41 +12,56 @@ radius = 60.0083
 extents = Vector2( 523, 35 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 49
+font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=4]
+size = 24
+font_data = ExtResource( 4 )
 
 [node name="field" type="Node"]
 script = ExtResource( 1 )
 
 [node name="round_obstacle" type="StaticBody2D" parent="."]
+position = Vector2( 578.51, 327.404 )
+scale = Vector2( 0.5, 0.5 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="round_obstacle"]
 texture = ExtResource( 2 )
+region_enabled = true
 region_rect = Rect2( 0, 299, 148, 150 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="round_obstacle"]
 shape = SubResource( 1 )
 
 [node name="wall" type="StaticBody2D" parent="."]
-visible = false
+position = Vector2( 521.529, 562.161 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="sprite" type="Sprite" parent="wall"]
+scale = Vector2( 5, 0.5 )
 texture = ExtResource( 3 )
+region_enabled = true
 region_rect = Rect2( 0, 219, 209, 110 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
 shape = SubResource( 2 )
 
 [node name="start" type="Position2D" parent="."]
+position = Vector2( 56.0159, 79.1951 )
 
 [node name="mode" type="Label" parent="."]
+margin_left = 533.952
+margin_top = 60.9834
+margin_right = 638.952
+margin_bottom = 97.9834
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.392157, 0.627451, 0.247059, 1 )
 text = "reflect"
 align = 2
 __meta__ = {
@@ -53,6 +69,13 @@ __meta__ = {
 }
 
 [node name="instructions" type="Label" parent="."]
+margin_left = 106.096
+margin_top = 51.2189
+margin_right = 247.096
+margin_bottom = 82.2189
 custom_fonts/font = SubResource( 4 )
 text = "<space>: toggle mode
 <click>: launch ball"
+__meta__ = {
+"_edit_use_anchors_": false
+}

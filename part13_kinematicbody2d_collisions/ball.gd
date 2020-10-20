@@ -12,27 +12,21 @@ var bounce_coefficent = 1.0
 var reflect = true
 
 func _ready():
-	randomize()
-	# set start velocity towards mouse position
-	vel = (get_global_mouse_pos() - get_pos()).normalized() * speed
-	set_fixed_process(true)
+	#randomize()
+	vel = (get_viewport().get_mouse_position() - position).normalized() * speed
 
-func _fixed_process(delta):
+func _physics_process(delta):
 	# move the body
-	var motion = move(vel * delta)
-	if is_colliding():
-		# find the normal
-		var n = get_collision_normal()
+	var collision = move_and_collide(vel * delta)
+	if collision:
 		if reflect:
 			# reflect the motion *and* the velocity
-			motion = n.reflect(motion)
-			vel = n.reflect(vel) * bounce_coefficent
+			vel = vel.bounce(collision.normal)
 		else:
 			# or slide them
-			motion = n.slide(motion)
-			vel = n.slide(vel)
-		# remember to also move the resulting motion amount
-		move(motion)
+			vel = move_and_slide(vel)
 
-func _on_visible_exit_screen():
+
+
+func _on_visible_screen_exited():
 	queue_free()

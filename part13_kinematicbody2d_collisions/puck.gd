@@ -12,11 +12,9 @@ var bounce_coefficent = 1.0
 func _ready():
 	randomize()
 	# start at center of screen
-	set_pos(OS.get_window_size() / 2)
+	position = OS.get_window_size() / 10
 	# start in a random direction
 	vel = Vector2(speed, 0).rotated(rand_range(0, 2*PI))
-	set_fixed_process(true)
-	set_process_input(true)
 
 func _input(event):
 	# spacebar toggles vector display
@@ -24,12 +22,9 @@ func _input(event):
 		var dbug = get_node("debug_draw")
 		dbug.set_hidden(not dbug.is_visible())
 
-func _fixed_process(delta):
+func _physics_process(delta):
 	# uncomment to demonstrate gravity
 	# vel.y += 1000 * delta
-	var motion = move(vel * delta)
-	if is_colliding():
-		var n = get_collision_normal()
-		motion = n.reflect(motion)
-		vel = n.reflect(vel) * bounce_coefficent
-		move(motion)
+	var collision = move_and_collide(vel * delta)
+	if collision:
+		vel = vel.bounce(collision.normal)

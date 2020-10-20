@@ -15,14 +15,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Part 13 Kinematicbody 2d Collisions"
-run/main_scene="res://bounce_box.tscn"
+config/name="Part 14 Intro Rigidbody 2d"
+run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
-config/auto_accept_quit=false
-
-[global]
-
-quit=false
 
 [rendering]
 
