@@ -15,14 +15,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Part 02 Scripting"
-run/main_scene="res://Sprite.tscn"
+config/name="First Tilemap"
+run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
-
-[display]
-
-window/size/width=600
-window/size/height=400
 
 [rendering]
 
