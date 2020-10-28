@@ -16,6 +16,7 @@ func _ready():
 	pass
 
 func _input(event):
+	# if we dont have ground ray check, we would be flying after couples key pressing
 	if event.is_action_pressed("ui_select") and ground_ray.is_colliding():
 		vel.y = JUMP_SPEED
 	if event.is_action_released("ui_select"):

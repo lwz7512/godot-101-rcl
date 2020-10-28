@@ -7,15 +7,15 @@
 [node name="main" type="Node"]
 
 [node name="background" type="Sprite" parent="."]
-position = Vector2( 512.576, 299.669 )
+position = Vector2( 499.224, 231.572 )
 scale = Vector2( 0.331198, 0.382119 )
 texture = ExtResource( 1 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 134.859, 154.887 )
+position = Vector2( 133.524, 157.557 )
 
 [node name="platform" parent="." instance=ExtResource( 3 )]
-position = Vector2( 328.029, 464.691 )
+position = Vector2( 313.341, 401.935 )
 
 [node name="platform 1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 767.321, 257.73 )

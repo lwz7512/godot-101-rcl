@@ -9,11 +9,10 @@ extents = Vector2( 37.1184, 65.0974 )
 [node name="player" type="Area2D"]
 position = Vector2( 1.41422, 15.5564 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="sprite" type="Sprite" parent="."]
+position = Vector2( 0, 1.97769 )
+scale = Vector2( 1, 0.969099 )
 texture = ExtResource( 2 )
 offset = Vector2( 0, -64 )
 

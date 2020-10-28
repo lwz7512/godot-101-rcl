@@ -5,7 +5,7 @@
 [ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 32
+size = 24
 font_data = ExtResource( 3 )
 
 [node name="main" type="Node"]
@@ -17,10 +17,10 @@ __meta__ = {
 }
 
 [node name="score_label" type="Label" parent="HUD"]
-margin_left = 350.698
-margin_top = 108.33
-margin_right = 646.698
-margin_bottom = 147.33
+margin_left = 52.434
+margin_top = 26.213
+margin_right = 348.434
+margin_bottom = 65.213
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.109804, 0.745098, 0.290196, 1 )
 text = "Current Score: 00"

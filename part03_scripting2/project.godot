@@ -19,6 +19,11 @@ config/name="Part 03 Scripting 2"
 run/main_scene="res://Sprite.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=600
+window/size/height=320
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

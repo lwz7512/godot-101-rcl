@@ -12,11 +12,14 @@ scale = Vector2( 0.332059, 0.387084 )
 texture = ExtResource( 3 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 81, 94 )
+position = Vector2( 99.7089, 19.1645 )
 scale = Vector2( 0.2, 0.2 )
 
 [node name="platform" parent="." instance=ExtResource( 2 )]
-position = Vector2( 11.8953, 286.243 )
+position = Vector2( -32.9632, 240.543 )
 
 [node name="platform2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 210.895, 455.243 )
+position = Vector2( 317.16, 357.251 )
+
+[node name="platform3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 639.665, 498.012 )

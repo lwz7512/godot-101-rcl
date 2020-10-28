@@ -26,6 +26,7 @@ func _physics_process(delta):
 	
 	# change speed by time
 	vel += acc * delta
+	
 	# restrict speed
 	vel.x = clamp(vel.x, -MAX_SPEED, MAX_SPEED)
 	vel.y = clamp(vel.y, -MAX_SPEED, MAX_SPEED)

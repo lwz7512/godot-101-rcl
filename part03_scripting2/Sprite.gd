@@ -7,13 +7,13 @@ var vel
 var spin
 
 func _ready():
+	# important to add this randomize number creation
 	randomize()
 	screensize = get_viewport_rect().size
-	extents = get_texture().get_size() / 2
+	extents = get_rect().size * scale / 2
 	pos = screensize / 2
 	vel = Vector2(rand_range(100, 300), 0).rotated(rand_range(0, 2*PI))
 	spin = rand_range(-PI, PI)
-	set_process(true)
 
 func _process(delta):
 	rotation += spin * delta

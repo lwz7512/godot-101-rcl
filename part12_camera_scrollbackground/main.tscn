@@ -10,26 +10,28 @@
 layer = -1
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( -20.9763, -56.9356 )
 
 [node name="background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 79.1489, -314.456 )
+position = Vector2( 325.849, -199.97 )
+scale = Vector2( 0.86246, 0.771742 )
 texture = ExtResource( 1 )
 region_rect = Rect2( 0, 0, 12288, 1536 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -368.564, -708.151 )
+position = Vector2( 1075.8, -615.256 )
 
 [node name="platform" parent="." instance=ExtResource( 3 )]
-position = Vector2( -1136, -448 )
+position = Vector2( -935.227, -618.807 )
 
 [node name="platform 1" parent="." instance=ExtResource( 3 )]
-position = Vector2( -496, -240 )
+position = Vector2( -475.024, -410.807 )
 
 [node name="platform 2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 776, 160 )
+position = Vector2( 647.146, -28.7866 )
 
 [node name="platform 4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1296, -80 )
+position = Vector2( 1266.03, -313.736 )
 
 [node name="platform 3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 144, -56 )
+position = Vector2( 78.0741, -202.834 )
